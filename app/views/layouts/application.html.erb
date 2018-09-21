@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ECommerce Products: <%= controller.action_name %></title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <div class="wrapper">
+       <div class="header">
+           <h1>E-Commerce</h1>
+           <p>Online Market</p>
+       </div>
+    
+      <p style="color: green"><%= flash[:notice] %></p>
+   
+      <div class="sidebar">
+        (sidebar)
+      </div>
+
+      <div class="main">
+        <%= yield %>
+      </div>
+
+      <div class="footer">
+         E-Commerce Online Market<br/>
+         A Rails Jumpstart Project
+      </div>
+  </div>
+  </body>
+</html>
