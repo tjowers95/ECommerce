@@ -11,16 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :product_id %>
-    <%= form.number_field :product_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :order_id %>
-    <%= form.number_field :order_id %>
-  </div>
-
+<h3><%= Product.find_by(id: order_item.product_id).title %>
   <div class="field">
     <%= form.label :quantity %>
     <%= form.number_field :quantity %>
